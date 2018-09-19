@@ -1,8 +1,4 @@
-import random
 import warnings
-
-
-inMatrix = [[random.randint(0,100) for x in range(0,50)] for y in range(0,50)]
 
 pointArr = []
 tupArr = []
