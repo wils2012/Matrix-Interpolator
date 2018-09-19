@@ -15,19 +15,13 @@ def findMaxProd(row, col, matrix):
 
     ########North Product########
     if (row - 3 >= 0):
-        #print(str(row) + " : " + str(col))
         northProd = (matrix[row - 3][col] * matrix[row - 2][col] * matrix[row - 1][col] * matrix[row][col])
         pointArr.append((northProd, [(row,col), ((row-1),col), ((row-2),col), ((row-3),col)]))
-    # print(westProd)
 
     ########South Product########
     if (row + 3 <= (len(matrix)-1)):
-        #        print("matrix len " + str(len(matrix)-1))
-        #        print("row+3 len " + str(row+3))
-        # print(str(row) + " : " + str(col))
         southProd = (matrix[row + 3][col] * matrix[row + 2][col] * matrix[row + 1][col] * matrix[row][col])
         pointArr.append((southProd,[(row,col), ((row+1),col), ((row+2),col), ((row+3),col)]))
-    #       print(eastProd)
 
     ########West Product########
     if ((col - 3) >= 0):
